@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    background-color: blue;
+    width: fit-content;
+    flex-shrink: 0;
+    padding: 20px;
+}
+
+#sidebar a {
+    display: block;
+    color: white;
+}
+
+#scorecontainer {
+    flex: 1;
+    min-width: 0;
+    height: 100vh;
+    overflow: auto;   /* only appears if the score can't fit even at minimum zoom */
+    padding: 20px;
+  }
+
+#score {
+    width: 100%;
+}
+
+#instrument-buttons {
+    display: flex;
+    gap: 6px;
+    margin: 12px 0;
+}
+
+#instrument-buttons button {
+    flex: 1;
+    padding: 6px 0;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+#instrument-buttons button.active {
+    background: white;
+    color: blue;
+}
+
+@font-face {
+    font-family: "MuseJazz Text";
+    src: url("fonts/MuseJazzText.otf") format("opentype");
+  }
+  
+  #score svg text {
+    font-family: "MuseJazz Text", cursive !important;
+  }
